@@ -1,0 +1,258 @@
+@import '@/lib/reset.scss';
+
+.box {
+  @include flex();
+  @include rect(100%, auto);
+  @include flexbox();
+  @include flex-direction(column);
+  overflow: hidden;
+  .homeheader {
+    @include rect(100%, 0.44rem);
+    @include flexbox();
+    @include justify-content(space-around);
+    @include align-items(center);
+    @include background-color(#fff);
+    .searchbox {
+      @include rect(60%, 0.3rem);
+      @include border(1px #000 solid);
+      @include border-radius(0.2rem);
+      @include flexbox();
+      @include align-items(center);
+    }
+  }
+  .content {
+    @include flex();
+    @include rect(100%, auto);
+    @include overflow();
+    .severtitle {
+      @include rect(100%, 0.64rem);
+      @include flexbox();
+      @include background-color(#fff);
+      li {
+        @include rect(0.64rem, auto);
+        img {
+          @include rect(0.64rem, 0.64rem);
+        }
+      }
+    }
+    .rushToday {
+      margin-top: 0.1rem;
+      @include flexbox();
+      @include rect(100%,0.94rem);
+      background-color: #fff;
+      .timerstart {
+        position: relative;
+        float:left;
+        @include rect(36%,0.94rem);
+        background:url(../../tool/images/rushbuy.jpg) no-repeat;
+        background-size: 100%, 0.94rem;
+        p {
+          width: 100%;
+          position: absolute;
+          bottom: 0.1rem;
+          text-align: center;
+          color: #9c9c9c;
+          font-size: 12px;
+        }
+      }
+      .rushlist {
+        @include rect(70%,0.94rem);
+        @include overflow();  
+        .rushcontent {
+          @include rect(2rem,0.94rem);
+          @include overflow();
+          .am-carousel {
+            @include rect(2rem,0.94rem);
+            .rushbox {
+              @include rect(2rem,0.94rem);
+              @include flexbox();
+              @include flex-wrap();
+            }
+          }
+        }
+      }
+    }
+    .floorTops {
+      margin: 0.1rem 0;
+      @include rect(100%,0.34rem);
+      @include flexbox();
+      img {
+        @include rect(0.34rem,0.34rem);
+      }
+      .myCarousel {
+        @include rect(2.66rem,0.34rem);
+        background-color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        .vItem {
+          line-height: 0.34rem
+        }
+      }
+    }
+    .newgoods {
+      .newgoods1{
+        @include rect(100%,1rem);
+        @include flexbox();
+        .img {
+          @include rect(100%,1rem);
+        }
+        :nth-child(1) {
+          @include flex(2);
+        }
+        :nth-child(2) {
+          @include flex(1);
+        }
+        :nth-child(3) {
+          @include flex(1);
+        }
+      }
+    }
+    .yourselect {
+      margin-top: 0.1rem;
+      .optimizebox {
+        @include rect(100%,2rem);
+        @include flexbox();
+        padding: 10px;
+        overflow-x: scroll;
+        @include flex-wrap();
+        @include flex-direction();
+        background-color: #fff;
+        li {
+          @include rect(1.2rem, 1.7rem);
+          @include flex-direction(column);
+          margin-right: 10px;
+          img {
+            width: 120px;
+            height: 120px;
+            border: 1px solid #efefef;
+            box-sizing: border-box;
+          }
+          .title1 {
+            margin-top: 3px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 0.2rem;
+            height: 0.2rem;
+            font-size: 13px;
+          }
+          .sellingPoint {
+            margin-top: 3px;
+            color: #9c9c9c;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 0.2rem;
+            height: 0.2rem;
+            font-size: 12px;
+          }
+          .price {
+            color: #c80f1e;
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+    .phonetop {
+      margin-top: 0.1rem;
+      .phonetop1 {
+        // @include rect(100%,1rem);
+        width: 100%;
+        @include flexbox();
+        .img {
+          @include rect(100%,1rem);
+        }
+        :nth-child(1) {
+          @include flex(1);
+        }
+        :nth-child(2) {
+          @include flex(1);
+        }
+        :nth-child(3) {
+          @include flex(1);
+        }
+      }
+    }
+    .findgoods {
+      margin-top: 0.1rem;
+      width: 100%;
+      .findgoods1 {
+        width: 100%;
+        display: flex;
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        .goodslist {
+          display: flex;
+          @include flex-direction(column);
+          align-items: center;
+          margin-bottom: 0.08rem;
+          background-color: #fff;
+          img {
+            display: block;
+            margin: 10px;
+          }
+          .title {
+            margin-top: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            line-height: 0.2rem;
+            height: 0.2rem;
+            font-size: 13px;
+          }
+          .sellingPoint {
+            background: #ebf6fe;
+            color: #87acd8;
+            width: 100%;
+            text-align: center;
+            font-size: 13px;
+            line-height: 0.2rem;
+            height: 0.2rem;
+          }
+          .price {
+            color: #c80f1e;
+            margin-top: 3px;
+          }
+        }
+      }
+
+    }
+    .proList {
+      .proItem {
+        @include rect(100%, 1rem);
+        @include flexbox();
+        @include border(0 0 1px 0, #eee, solid);
+        .itemImg {
+          @include rect(1rem, 100%);
+
+          img {
+              @include rect(0.9rem, 0.9rem);
+              @include border(1px, #f66, solid);
+              @include margin(0.05rem);
+          }
+        }
+        .itemInfo {
+          @include flex();
+          @include text-color(#333);
+        }
+      }
+    }
+
+  }
+}
+.footer {
+  @include rect(100%, 0.5rem);
+  @include background-color(#eee);
+
+  ul {
+    @include rect(100%, 100%);
+    @include flexbox();
+    a {
+      @include flex();
+      @include flexbox();
+      @include justify-content();
+      @include align-items();
+      @include text-color(#333);
+      &.active {
+        @include text-color(#f66);
+      }
+    }
+  }
+}

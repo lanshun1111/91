@@ -1,0 +1,91 @@
+@import '@/lib/reset.scss';
+
+.box {
+  // 这是中心部分
+  .Kcontent {
+    @include flexbox();
+    @include flex-direction();
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    // 这是左边列表栏
+    .titleList {
+      width: 25%;
+      height: 100%;
+      background-color: #f5f5f5;
+      .tile_side {
+        width: 100%;
+        height: 100%;
+        ul {
+          width: 100%;
+          height: 100%;
+          li {
+            text-decoration: none;
+            width: 90%;
+            height: 0.5rem;
+            background-color: #fff;
+            line-height: 0.5rem;
+            text-align: center;
+            color: #333;
+            margin-bottom:0.02rem;
+            &.active {
+              background-color: #f5f5f5;
+              color: red;
+              text-decoration: none;
+              width: 100%;
+              height: 0.5rem;
+              line-height: 0.5rem;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    // 这是我们数据渲染的地方
+    .kProlistbox {
+      width: 75%;
+      height: 100%;
+      background-color: #fff;
+      @include overflow();
+      .xxx {
+        width: 100%;
+        height: 100%;
+        @include overflow();
+        .one {
+          width: 100%;
+          height: 0.875rem;
+        }
+        .xx1 {
+          background-color:#f5f5f5;
+          width: 100%;
+          height: auto;
+          .xx1title {
+            width: 100%;
+          }
+          .picbox {
+            @include flexbox();
+            @include justify-content();
+            @include flex-direction(column);
+            width: 33%;
+            height: 1.35rem;
+            float: left;
+            background-color: #fff;
+            img{
+              float: left;
+              width: 80%;
+              height: auto;
+              display: block;
+              border: none;
+              margin: 0 auto;
+            }
+            span {
+              display: inline-block;
+              text-align: center;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}

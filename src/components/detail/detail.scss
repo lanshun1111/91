@@ -1,0 +1,440 @@
+@import '@/lib/reset.scss';
+.img {
+  border: 0;
+  outline: 0;
+  vertical-align: top;
+}
+.detailbox {
+  @include flexbox();
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  @include flex-direction(column);
+  .DEfoot {
+    width: 100%;
+    height: 0.48rem;
+    background-color: #ccc;
+    @include flexbox();
+    position: relative;
+    .buy {
+      position: fixed;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      height: 85%;
+      background-color: #fff;
+      z-index: 9999;
+      @include flexbox();
+      @include flex-direction(column);
+      transition: all 0.35s;
+      .buytop {
+        display: inline-block;
+        height: 1.05rem;
+        width: 100%;
+        position: relative;
+        .buytop_left {
+          position: absolute;
+          top: -0.27rem;
+          left: 0.1rem;
+          height: 1.2rem;
+          width: 1.2rem;
+          border: 1px solid #9c9c9c;
+          border-radius: 0.06rem;
+          box-sizing: border-box;
+          overflow: hidden;
+        }
+        .buytop_right {
+          margin-left:1.4rem;
+          margin-top: 0.2rem;
+          position: relative;
+          .close {
+            width: 0.6rem;
+            height: 0.6rem;
+            position: absolute;
+            top: 0rem;
+            right: 0.02rem;
+            border-radius: 100%;
+            display: block;
+            border: 1px solid #ccc;
+            background-image: url('./close.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+        }
+      }
+      .buyConent {
+        background-color: green;
+        width: 100%;
+        height: 100%;
+        @include overflow();
+      }
+      .buyfootbox {
+        display: block;
+        width: 100%;
+        height: 0.44rem;
+        background-color: #fff;
+        .buyfoot {
+          width: 100%;
+          height: 0.44rem;
+          background-color: #c80f1e;
+          color: #fff;
+          line-height: 0.44rem;
+          text-align: center;
+        }
+      }
+    }
+    .DEfoot_left {
+      flex:1.5;
+      height: 100%;
+      background-color: #fff;
+      @include flexbox();
+      .L_left {
+       @include flexbox();
+       @include flex-direction(column);
+       @include justify-content();
+       flex:1;
+       box-sizing: border-box;
+       height: 100%;
+       border-right: 1px solid #ccc;
+       .ico1{
+         background-image: url('./客服.svg');
+         background-repeat: no-repeat;
+         background-position: bottom;
+         background-size: auto 60%;
+       }
+       .ico2{
+         background-image: url('./cov.svg');
+         background-repeat: no-repeat;
+         background-position: bottom;
+         background-size: auto 60%;
+       }
+       .ico3{
+         background-image: url('./购物车.svg');
+         background-repeat: no-repeat;
+         background-position: bottom;
+         background-size: auto 60%;
+         position: relative;
+         span {
+           position: absolute;
+           font-size: 8px;
+           top: 20%;
+           right: 30%;
+           width: 0.1rem;
+           height: 0.1rem;
+           border-radius: 100%;
+           border: 1px solid #ccc;
+           line-height: 0.1rem;
+           text-align: center;
+           background-color: red;
+           color: #fff;
+         }
+       }
+       p {
+         width: 100%;
+         text-align: center;
+         height: 50%;
+         font-size: 12px;
+         line-height: 0.25rem;
+       }
+       i {
+         display: block;
+         width: 100%;
+         text-align: center;
+         height: 50%;
+         font-size: 12px;
+         word-break: break-all;
+       }
+      }
+    }
+    .DEfoot_center {
+      flex:1;
+      height: 100%;
+      background-color: #fff;
+      line-height: 0.45rem;
+      text-align: center;
+      color: #333;
+      border: 0;
+    }
+    .DEfoot_right {
+      flex:1;
+      height: 100%;
+      background-color: #c80f1e;
+      line-height: 0.45rem;
+      text-align: center;
+      color: #fff;
+      border: 0;
+    }
+  }
+  .DEheader {
+    @include rect(100%,0.45rem);
+    span {
+      margin-left: 13px;
+      font-size:0.16rem;
+      color: #333;
+    }
+  }
+  .DEcontent {
+    height: 100%;
+    width: 100%;
+    @include overflow();
+    .DEmeal {
+      height: 0.45rem;
+      width: 100%;
+      background-color: #fff;
+      margin-top: 0.3rem;
+      @include flexbox();
+      @include align-items();
+    }
+    .detailpicbox{
+      background-color:#fff;
+    }
+    .Comment {
+      width: 100%;
+      height: 2.86rem;
+
+      .ComBox {
+        width: 100%;
+        height: auto;
+        position: relative;
+        height: 2.86rem;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .h-scroll-wrap {
+          @include flexbox();
+          position:absolute;
+          width: 16.40rem;
+          padding-bottom: 0.15rem;
+          padding-top: 0.15rem;
+          padding-left: 0.1rem;
+          background-color: #f4f4f4;
+          height: 2.66rem;
+          .comment-item{
+            position: relative;
+            padding: 0.15rem 0.1rem;
+            height: 0.33rem;
+            width: 0.33rem;
+          }
+          .h-scroll-item {
+            float: left;
+            width: 3.13rem;
+            height: 100%;
+            border-radius: 0.04rem;
+            background-color: #fff;
+            box-shadow: 0 0.02rem .09rem 1px rgba(0,0,0,.08);
+            margin-right: 0.15rem;
+            box-sizing: border-box;
+            .comment-header {
+              height: 0.33rem;
+              width: 100%;
+              display: flex;
+              .avatar-box {
+                display: block;
+                height: 0.33rem;
+                width: 0.33rem;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  border-radius: 0.33rem;
+                  display: block;
+                }
+              }
+              .flex-child-average {
+                padding-left: 0.1rem;
+                flex: 1;
+                .flex-justify-between {
+                  display: flex;
+                  justify-content: space-between;
+                  .grey-9{
+                    color:#9c9c9c;
+                  }
+                }
+                .stars {
+                  margin-top: 6px;
+                  color: #c80f1e;
+                  .fa-star:before {
+                      content: "\F005";
+                  }
+                  .fa {
+                    display: inline-block;
+                    font: normal normal normal 14px/1 FontAwesome;
+                    font-size: inherit;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                  }
+                }
+              }
+            }
+            .comment-content{
+              margin-top: 0.085rem;
+              font-size: 12px;
+              height: 0.4rem;
+              color: #333;
+              text-align: justify;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              overflow: hidden;
+              word-break: break-word;
+            }
+            .comment-img-list {
+              font-size: 0;
+              overflow: auto;
+              margin-top: 0.08rem;
+              height: 1rem;
+              width: 100%;
+              .img-list-inner {
+                width: 1.05rem;
+                height: auto;
+                .img-box {
+                  width: 0.95rem;
+                  height: 0.95rem;
+                  display: inline-block;
+                  overflow: hidden;
+                  margin-right: 0.05rem;
+                  margin-bottom: 0.05rem;
+                  position: relative;
+                  border-radius: 0.03rem;
+                  border: .3px solid #ededed;
+                  cursor: pointer;
+                  img {
+                    left: 50%;
+                    top: 50%;
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    -webkit-transform: translate(-50%,-50%);
+                    transform: translate(-50%,-50%);
+                  }
+                }
+              }
+            }
+            .comment-foot {
+              width: 60%;
+              height: auto;
+              @include flexbox();
+              @include justify-content(space-between);
+              .ok {
+                color: #9c9c9c;
+                font-size: 0.12rem;
+              }
+              .num {
+                color: #9c9c9c;
+                font-size: 0.12rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .DCpic {
+      width: 100%;
+      height: 0.94rem;
+      background-color: #fff;
+      @include flexbox();
+      margin-top:0.15rem;
+      .DC-left {
+        width: 20%;
+        height: 100%;
+        background-color: #fff;
+        p {
+          height: 100%;
+          width: 100%;
+          letter-spacing:0.15rem;
+          text-align: center;
+          line-height: 0.94rem;
+          color: #9c9c9c;
+          box-sizing: border-box;
+        }
+      }
+      .DC-right {
+        width: 80%;
+        height: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        .right_pic {
+          height: 100%;
+          width: 1188px;
+          display: flex;
+          overflow-x: scroll;
+          overflow-y: hidden;
+          @include align-items();
+          .right_picx {
+            float: left;
+            height: 68px;
+            width: 86px;
+            display: flex;
+            flex-direction: column;
+            @include align-items();
+            img {
+              margin-top: 0.04rem;
+              width: 0.22rem;
+              height: 0.22rem;
+              display: block;
+              vertical-align: top;
+            }
+            .key {
+              margin-top: 0.1rem;
+              height: 0.22rem;;
+              font-size: 0.12rem;
+              letter-spacing: normal;
+              color: #333;margin-bottom: 0.05rem;
+
+            }
+            .text {
+                width: 0.75rem;
+                text-align: center;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                height: 0.22rem;;
+                font-size: 0.12rem;
+            }
+
+
+
+
+          }
+        }
+      }
+    }
+  }
+}
+  .Dmask {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    margin-top: 0.05rem;
+    ul {
+      width: 100%;
+      height: auto;
+      @include flexbox();
+     li {
+       width: 25%;
+       height: 0.2rem;
+       text-align: center;
+     }
+    }
+  }
+  .P_color {
+    color: red;
+    font-size: 0.12rem;
+  }
+  .P_color1 {
+    color: red;
+    font-size: 0.12rem;
+    font-weight: 600;
+    margin-top: 0.05rem;
+  }
+
+
+  .allmask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 15;
+    background-color: rgba(0,0,0,.5);
+    transition: all 2s;
+  }

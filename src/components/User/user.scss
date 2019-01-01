@@ -1,0 +1,310 @@
+@import '@/lib/reset.scss';
+.userbox {
+  @include rect(100%,100%);
+  @include overflow();
+  .set {
+    @include rect(100%,0.44rem);
+    @include flexbox();
+    background-image: url('https://img2.ch999img.com/newstatic//915/4457658aed4812.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6666;
+    .left-side,.right-side{
+      @include flexbox();
+      height: 100%;
+      min-width: 0.44rem;
+      @include justify-content();
+      @include align-items();
+      color: #fff;
+    }
+    .right-side{
+      margin-right: 0.1rem;
+      width: 0.90rem;
+      span{
+        height: 0.18rem;
+        width: 0.18rem;
+        background-image: url('./ll.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-left: 0.1rem;
+      }
+    }
+    .left-side {
+      i{
+        font-size: 0.14rem;
+        display: inline-block;
+        background-image:url();
+        background-repeat: no-repeat;
+        background-size: cover;
+        .left-Icon {
+          font-size: 0.20rem !important;
+          font-weight: 600 !important;
+        }
+      }
+    }
+    .center-side {
+      @include rect(100%,100%);
+    }
+  }
+  .userheader{
+    @include rect(100%,0.97rem);
+    background-image: url('https://img2.ch999img.com/newstatic//915/4457658aed4812.png');
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0);
+    background-size: cover;
+    padding-top: 0.44rem;
+    }
+  .member-box {
+    height: 1.79rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 2px 5px #ccc;
+    background: #fff;
+    margin-left: 0.15rem;
+    margin-right: 0.15rem;
+    margin-bottom: 0.6rem;
+    margin-top: -.4rem;
+    padding: 0 0.1rem;
+    box-sizing: border-box;
+    position: relative;
+    .money {
+      @include rect(100%,0.40rem)
+      @include flexbox();
+      @include flex-wrap(no-wrap);
+      @include align-items();
+      position: absolute;
+      bottom: 0.1rem;
+      left: 0;
+      .moneyx {
+        flex: 1;
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include flex-direction(column);
+        height: 0.5rem;
+        img{
+          @include rect(.24rem,.24rem);
+        }
+        p{
+          @include flexbox();
+          @include justify-content();
+          @include align-items();
+          color: #333;
+        }
+        span{
+          @include flexbox();
+          @include justify-content();
+          @include align-items();
+          color: #333;
+        }
+      }
+    }
+    .log {
+      box-sizing: border-box;
+      @include flexbox();
+      @include wrap(no-wrap);
+      padding: 0.2rem 0;
+      width: 100%;
+      height:1.16rem;
+      img{
+        height:0.7rem;
+        width: 0.7rem;
+        border-radius: 100%;
+        border: 0.03rem solid #fff;
+        box-shadow: 0 0.02rem 0.05rem #ccc;
+        cursor: pointer;
+      }
+      .login-loser {
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        margin-left: 0.05rem;
+        a{
+          display: inline-block;
+          color: #333;
+          padding:0 0.06rem;
+          font-size: 0.14rem;
+          cursor: pointer;
+        }
+      }
+        .login-success {
+          @include flexbox();
+          @include flex-direction(column);
+          @include justify-content();
+          @include align-items(left);
+          margin-top: 0.03rem;
+          .login-access1{
+            display: block;
+            margin-left: 0.20rem;
+            font-weight: 800;
+            font-size: 0.16rem;
+            cursor: pointer;
+          }
+          .login-access2{
+            margin-top: 0.04rem;
+            margin-left: 0.20rem;
+            font-size: 0.12rem;
+            cursor: pointer;
+            width: 0.78rem;
+            height: 0.18rem;
+            background-image:url('https://img2.ch999img.com/newstatic//916/76b7bebb5d76d8.png.webp');
+            background-repeat: no-repeat;
+            background-size:cover;
+          }
+        }
+        .doubleone {
+          display: none;
+        }
+     }
+    }
+  .userContent {
+    @include rect(100%,100%);
+    .Code{
+          @include rect(90%,0.44rem);
+          margin: 0 5%;
+          border-radius: 0.1rem;
+          box-shadow: 0 2px 5px #ccc;
+          background: #fff;
+          @include flexbox();
+          @include justify-content(space-between);
+          p{
+            background-color: #fff;
+            line-height:0.44rem;
+            font-weight: 700;
+            font-size: 0.16rem;
+          }
+          span{
+            display: inline-block;
+            @include rect(0,0);
+            float: right;
+            border:0.1rem solid #000;
+            border-color: #000 #fff #fff #fff;
+            margin-top: 0.2rem;
+          }
+        }
+    }
+    .orderbox {
+      margin: 0.44rem auto;
+      @include rect(90%,1.44rem);
+      background-color: #fff;
+      border-radius: 0.1rem;
+
+
+
+
+
+
+
+      .ordertop {
+        width: 100%;
+        height: 0.44rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        border-bottom: 1px solid #ccc;
+        @include align-items();
+        p{
+          font-size: 0.16rem;
+          font-weight: 700;
+          margin-left: 8px;
+        }
+        .right-side {
+          float: right;
+          margin-right: 8px;
+          color: rgb(156, 156, 156);
+        }
+      }
+      .orderbottom{
+        @include flexbox();
+        @include wrap(no-wrap);
+        padding: 0.2rem 0;
+        width: 100%;
+        height:1.16rem;
+        .moneyx {
+          flex: 1;
+          @include flexbox();
+          @include justify-content();
+          @include align-items();
+          @include flex-direction(column);
+          height: 0.5rem;
+          margin-top: 0.1rem;
+          p{
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            color: #333;
+            margin-top: 0.2rem;
+          }
+          span{
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            color: #333;
+            img{
+              width: 0.24rem;
+              height: 0.24rem;
+            }
+          }
+        }
+      }
+    }
+
+
+    .messagesbox {
+      margin: 0.44rem auto;
+      @include rect(90%,2.04rem);
+      background-color: #fff;
+      border-radius: 0.1rem;
+      .messagestop {
+        width: 100%;
+        height: 0.44rem;
+        @include flexbox();
+        @include justify-content(space-between);
+        border-bottom: 1px solid #ccc;
+        @include align-items();
+        p{
+          font-size: 0.16rem;
+          font-weight: 700;
+          margin-left: 8px;
+        }
+        .right-side {
+          float: right;
+          margin-right: 8px;
+          color: rgb(156, 156, 156);
+        }
+      }
+      .messagesbottom{
+        padding: 0.2rem 0;
+        width: 100%;
+        height:1.6rem;
+        .moneyx {
+          width:25%;
+          float: left;
+          @include flexbox();
+          @include justify-content();
+          @include align-items();
+          @include flex-direction(column);
+          height: 0.5rem;
+          margin-top: 0.03rem;
+          p{
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            color: #333;
+            margin-top: 0.05rem;
+          }
+          span{
+            @include flexbox();
+            @include justify-content();
+            @include align-items();
+            color: #333;
+            margin-top: 0.05rem;
+            img{
+              width: 0.24rem;
+            }
+          }
+        }
+      }
+    }
+}

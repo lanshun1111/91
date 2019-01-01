@@ -1,0 +1,159 @@
+@import '@/lib/reset.scss';
+
+.register{
+  background-color: #fff;
+  @include rect(100%,100%);
+  // 这是 头部
+  .am-navbar {
+    background-color: rgba(250, 250, 250, 0.98);
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    // 这是头部的icon
+    .am-icon {
+      color:rgb(51, 51, 51);
+      font-size: 0.18rem;
+    }
+    .loginswitch {
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      opacity: 0.05;
+      right: 0;
+      top: 0;
+    }
+  }
+  //这是 头部的下拉
+  .showfooter {
+    display: none;
+    @include rect(100%, 0.5rem);
+    @include background-color(#000);
+
+    ul {
+      @include rect(100%, 100%);
+      @include flexbox();
+      a {
+        @include flex();
+        @include flexbox();
+        @include justify-content();
+        @include align-items();
+        @include text-color(#333);
+        color: white;
+        &.active {
+          @include text-color(#f66);
+        }
+      }
+    }
+  }
+
+  //这是公共部分
+  .COMX {
+    bottom: -1px;
+    @include rect(3.35rem,0.5rem);
+    border-bottom:1px solid #dfdfdf;
+    margin: 0 auto;
+    @include flexbox();
+    @include align-items();
+    font: 14px/1 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,"sans-serif";
+    color: #333;
+    word-break: break-all;
+    &::after{
+      bottom: -.5px;
+      left: 0;
+      right: 0;
+      border-bottom: 1px solid #dfdfdf;
+    }
+  }
+  .TEL {
+    margin-top:0.1rem;
+    position: relative;
+    span {
+      display: block;
+      height: 0.18rem;
+      width: 0.18rem;
+      background-image: url('./手机.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    input {
+      width: 3.05rem;
+      height: 0.3rem;
+      position: absolute;
+      right: 0;
+      top: 0.1rem;
+    }
+  }
+  .PIC {
+    margin-top:0.1rem;
+    position: relative;
+    span {
+      display: block;
+      height: 0.18rem;
+      width: 0.18rem;
+      background-image: url('./太极.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    input {
+      width: 2.33rem;
+      height: 0.3rem;
+      position: absolute;
+      right: 0.72rem;
+      top: 0.1rem;
+    }
+    img {
+      position: absolute;
+      top: 0.1rem;
+      right: 0;
+      width: 0.72rem;
+      height:0.24rem;
+    }
+  }
+  .MSG {
+    margin-top:0.1rem;
+    position: relative;
+    span {
+      display: block;
+      height: 0.18rem;
+      width: 0.18rem;
+      background-image: url('./解锁.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    input {
+      width: 3.05rem;
+      height: 0.3rem;
+      position: absolute;
+      right: 0;
+      top: 0.1rem;
+    }
+  }
+  .Told {
+    border-bottom: none;
+    .imgtold {
+      margin-right: 0.03rem;
+      @include rect(0.180rem,0.180rem);
+      border-radius: 100%;
+      border: 1px solid #ccc;
+      background-image: url('./对.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  .Told {
+    border-bottom: none;
+    .imgtold1 {
+      margin-right: 0.03rem;
+      @include rect(0.180rem,0.180rem);
+      border-radius: 100%;
+      border: 1px solid #ccc;
+    }
+  }
+  .BUT {
+    margin-top:0.05rem;
+    button {
+      color: #fff;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
